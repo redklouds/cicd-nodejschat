@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 var port = 5000;
-
+var os = require('os');
 //settings for view
 app.set('views', __dirname + '/templates');
 app.set('view engine', "pug");
@@ -9,7 +9,7 @@ app.engine('pug', require('pug').__express);
 
 //routes
 app.get("/", function(req, res){
-    res.render("page");//just like render_template('page.html') in python
+    res.render("page",{hostName: os.hostname()});//just like render_template('page.html') in python
 });
 
 app.get("/hello",function(req, res){
