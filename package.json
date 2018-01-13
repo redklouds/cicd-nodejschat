@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "a simple nodeJS program with socket IO",
   "dependencies": {
-    "socket.io": "latest",
     "express": "latest",
-    "pug": "latest"
+    "jshint": "latest",
+    "mocha": "^4.1.0",
+    "pug": "latest",
+    "socket.io": "latest"
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint index.js"
   },
   "repository": {
     "type": "git",

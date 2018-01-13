@@ -4,7 +4,7 @@ var port = 5000;
 
 //settings for view
 app.set('views', __dirname + '/templates');
-app.set('view engine', "jade");
+app.set('view engine', "pug");
 app.engine('pug', require('pug').__express);
 
 //routes

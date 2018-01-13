@@ -1,6 +1,10 @@
 window.onload = function(){
 	var message = [];
-	var socket = io.connect('http://lydanny.com:5000');//establish the socket IO connection with server
+	//var socket = io.connect('http://localhost:5000');//establish the socket IO connection with server
+	//var socket = io.connect("http://192.168.99.101:5000")
+	var socket = io.connect(window.location.host);
+	console.log(window.location.host);
+	console.log(socket);
 	//var field = document.getElementById("field");
 	var field = document.getElementsByClassName("field")[0];
 	//var sendButton = document.getElementById("send");
