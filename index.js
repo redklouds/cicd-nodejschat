@@ -9,7 +9,7 @@ app.engine('jade', require('jade').__express);
 
 //routes
 app.get("/", function(req, res){
-    res.send("it works!" + req);
+    res.render("page");//just like render_template('page.html') in python
 });
 
 
