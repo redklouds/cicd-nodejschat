@@ -1,6 +1,6 @@
 window.onload = function(){
 	var message = [];
-	var socket = io.connect('http://localhost:3700');//establish the socket IO connection with server
+	var socket = io.connect('http://lydanny.com:5000');//establish the socket IO connection with server
 	//var field = document.getElementById("field");
 	var field = document.getElementsByClassName("field")[0];
 	//var sendButton = document.getElementById("send");

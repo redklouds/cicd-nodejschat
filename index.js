@@ -1,11 +1,11 @@
 var express = require("express");
 var app = express();
-var port = 3700;
+var port = 5000;
 
 //settings for view
 app.set('views', __dirname + '/templates');
 app.set('view engine', "jade");
-app.engine('jade', require('jade').__express);
+app.engine('pug', require('pug').__express);
 
 //routes
 app.get("/", function(req, res){
