@@ -12,6 +12,20 @@ app.get("/", function(req, res){
     res.render("page");//just like render_template('page.html') in python
 });
 
+app.get("/hello",function(req, res){
+	res.render("hello", {title: 'hey', message:'this is the hello route'});
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 //set up a static folder(like flask to send static front end webpages or files)
