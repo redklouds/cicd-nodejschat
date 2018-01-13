@@ -11,6 +11,17 @@ notifications:
 cache:
   directories:
     - node_modules
+
+before_script:
+  - npm install -g mocha chai
+
+
 script:
   - npm test
+  - docker build -t test .
+  - docker run -d --name test test
+  - docker ps | grep -q test
+after_success:
+  - echo "After successful build"
+  - sh .travis/deploy_dockerhub.sh
 
