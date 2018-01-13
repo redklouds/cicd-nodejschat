@@ -1,0 +1,24 @@
+{
+  "name": "nodechat",
+  "version": "1.0.0",
+  "description": "a simple nodeJS program with socket IO",
+  "dependencies": {
+    "socket.io": "latest",
+    "express": "latest",
+    "jade": "latest"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redklouds/cicd-nodejschat.git"
+  },
+  "author": "danny ly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redklouds/cicd-nodejschat/issues"
+  },
+  "homepage": "https://github.com/redklouds/cicd-nodejschat#readme"
+}
