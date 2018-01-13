@@ -9,6 +9,7 @@ app.engine('pug', require('pug').__express);
 
 //routes
 app.get("/", function(req, res){
+    console.log("we have a new connection..");
     res.render("page",{hostName: os.hostname()});//just like render_template('page.html') in python
 });
 
@@ -37,6 +38,7 @@ app.use(express.static(__dirname + '/public')); // the __dirnam states the curre
 var io = require('socket.io').listen(app.listen(port));
 
 io.sockets.on('connection', function(socket){
+	console.log('calling here...');
 	socket.emit('message', {message: "welcome to the chat"});
 	socket.on('send', function(data){
 		io.sockets.emit('message',data);
