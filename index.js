@@ -21,14 +21,6 @@ app.get("/hello",function(req, res){
 
 
 
-
-
-
-
-
-
-
-
 //set up a static folder(like flask to send static front end webpages or files)
 app.use(express.static(__dirname + '/public')); // the __dirnam states the current root directory
 
@@ -38,7 +30,7 @@ app.use(express.static(__dirname + '/public')); // the __dirnam states the curre
 var io = require('socket.io').listen(app.listen(port));
 
 io.sockets.on('connection', function(socket){
-	console.log('calling here...');
+	console.log('new connection...');
 	socket.emit('message', {message: "welcome to the chat"});
 	socket.on('send', function(data){
 		io.sockets.emit('message',data);
