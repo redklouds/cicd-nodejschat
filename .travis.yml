@@ -14,7 +14,7 @@ cache:
 
 before_script:
   - npm install -g mocha chai
-
+  - node index.js
 
 script:
   - npm test

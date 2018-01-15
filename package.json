@@ -6,11 +6,13 @@
     "express": "latest",
     "jshint": "latest",
     "pug": "latest",
+    "request": "^2.83.0",
     "socket.io": "latest"
   },
   "main": "index.js",
   "scripts": {
-    "test": "jshint index.js"
+    "pretest": "jshint index.js",
+    "test": "mocha tests/"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,8 @@
   "homepage": "https://github.com/redklouds/cicd-nodejschat#readme",
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^4.1.0"
+    "mocha": "^4.1.0",
+    "request": "^2.83.0",
+    "supertest": "^3.0.0"
   }
 }

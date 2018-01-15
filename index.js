@@ -40,6 +40,8 @@ io.sockets.on('connection', function(socket){
 		io.sockets.emit('message',data);
 	});
 });
+
+module.exports = app;
 /*
 //main server entry 
 var server = app.listen(port, function() {
