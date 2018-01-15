@@ -50,7 +50,8 @@ window.onload = function(){
         }
     });
 	sendButton.onclick = function() {
-        if(name.value == ""){
+        alert('just press enter!');
+        /*if(name.value == ""){
             //check if name field is empty
             alert("please type your name!");
         }else{
@@ -75,6 +76,6 @@ window.onload = function(){
 		    //socket.emit('send', {message:text });
 	        //socket.emit('send',{message:text, username: name.value});
             //field.value = "";
-        }
+        }*/
 	};
 }
