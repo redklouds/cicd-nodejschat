@@ -32,7 +32,7 @@ app.use(express.static(__dirname + '/static')); //open up PUBLIC access to
 
 console.log('Starting.. listening on ' + port);
 var io = require('socket.io').listen(app.listen(port));
-console.log(app);
+//console.log(app);
 io.sockets.on('connection', function(socket){
 	console.log('new connection...');
 	socket.emit('message', {message: "welcome to the chat"});

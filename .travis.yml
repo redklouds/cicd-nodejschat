@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "6.11"
-  - "stable"
+#  - "stable"
   - npm install
 services:
   - docker
