@@ -30,9 +30,9 @@ app.use(express.static(__dirname + '/static')); //open up PUBLIC access to
 //this directory.
 
 
-
+console.log('Starting.. listening on ' + port);
 var io = require('socket.io').listen(app.listen(port));
-
+console.log(app);
 io.sockets.on('connection', function(socket){
 	console.log('new connection...');
 	socket.emit('message', {message: "welcome to the chat"});
@@ -40,8 +40,8 @@ io.sockets.on('connection', function(socket){
 		io.sockets.emit('message',data);
 	});
 });
-
-exports.server = app.listen(port);
+module.export = app;
+//exports.server = app.listen(port);
 /*
 //main server entry 
 var server = app.listen(port, function() {
