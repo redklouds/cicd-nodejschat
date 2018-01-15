@@ -13,6 +13,7 @@ COPY index.js /app/nodeJSChat
 
 ADD templates /app/nodeJSChat/templates/
 ADD public /app/nodeJSChat/public/
+ADD static /app/nodeJSChat/static/
 
 COPY package*.json /app/nodeJSChat/
 
