@@ -43,11 +43,19 @@ window.onload = function(){
             //check if name field is empty
             alert("please type your name!");
         }else{
+            
             //var text = field.value;
 		    var text = field.value;
+            text.addEventListener("keyup", function(event){
+                console.log("key press detected");
+                if(event.keyCode === 13){
+                    socket.emit('send',{message:text, username:name.value});
+                    field.value = "";
+                }
+            });
 		    //socket.emit('send', {message:text });
-	        socket.emit('send',{message:text, username: name.value});
-            field.value = "";
+	        //socket.emit('send',{message:text, username: name.value});
+            //field.value = "";
         }
 	};
 }
