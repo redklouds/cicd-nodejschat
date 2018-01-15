@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var port = 5000;
+var port = process.env.PORT || 5000;
 var os = require('os');
 //settings for view
 app.set('views', __dirname + '/templates');
@@ -41,7 +41,7 @@ io.sockets.on('connection', function(socket){
 	});
 });
 
-module.exports = app;
+exports.server = app.listen(port);
 /*
 //main server entry 
 var server = app.listen(port, function() {

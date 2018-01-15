@@ -29,9 +29,6 @@ describe("chat Web server Testing", function() {
         });
     });
 
-    afterEach(function(){
-        app.close();
-    });
 
 });
 
