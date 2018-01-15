@@ -46,7 +46,7 @@ window.onload = function(){
             
             //var text = field.value;
 		    var text = field.value;
-            text.addEventListener("keyup", function(event){
+            field.addEventListener("keyup", function(event){
                 console.log("key press detected");
                 if(event.keyCode === 13){
                     socket.emit('send',{message:text, username:name.value});
