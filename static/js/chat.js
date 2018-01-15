@@ -36,9 +36,17 @@ window.onload = function(){
         console.log(data.username);
 	});
     
-    $("#name").keypress(function(event) {
+    $(".field").keypress(function(event) {
         if(event.which == 13){
             console.log("how adare you enter presed");
+            if(name.value == ""){
+                alert("please type your name!");
+            }else{
+                var text = field.value;
+                console.log("ready to go ...");
+                socket.emit('send',{message: text, username: name.value});
+                field.value = "";
+            }
         }
     });
 	sendButton.onclick = function() {

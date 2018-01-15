@@ -1,18 +1,19 @@
 doctype
 html
-	head
-		title= "Real time web chat"
-		script(src='/chat.js')
-		script(src='/socket.io/socket.io.js').
-	body
-		#content(style='width: 500px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;')
-		.controls
-			| Name: 
-			input#name(style='width:350px;')
-			br
-			input.field(style='width:350px;')
-			input.send#send(type='button',value='send')
-			br
-			| your current hostName is: 
-			b=hostName
+    head
+        title="Real time web chat"
+        script(src='/js/jquery-3.2.1.slim.js')
+        script(src='/js/chat.js')
+        script(src='/socket.io/socket.io.js')
+    body
+        #content(style='width: 500px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;')
+        .controls
+            | Name: 
+            input#name(style='width:350px;')
+            br
+            input.field(style='width:350px;')
+            input.send#send(type='button',value='send')
+            br
+            | your current hostName is: 
+            b=hostName
 

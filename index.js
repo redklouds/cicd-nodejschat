@@ -23,7 +23,11 @@ app.get("/hello",function(req, res){
 
 //set up a static folder(like flask to send static front end webpages or files)
 app.use(express.static(__dirname + '/public')); // the __dirnam states the current root directory
-
+//access with lydanny.com:port/fileInpublic folder
+//so lydanny.com:5000/chat.js server the chat js file if we want other files or
+//diret have have that here
+app.use(express.static(__dirname + '/static')); //open up PUBLIC access to
+//this directory.
 
 
 
